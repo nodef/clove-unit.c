@@ -1,6 +1,6 @@
 # CLove-Unit &middot; [![version](https://img.shields.io/github/v/release/fdefelici/clove-unit?label=latest&sort=semver)](./clove-unit.h) [![workflow](https://img.shields.io/github/actions/workflow/status/fdefelici/clove-unit/ci_action.yml)](https://github.com/fdefelici/clove-unit/actions/workflows/ci_action.yml) [![conan](https://img.shields.io/conan/v/clove-unit)](https://conan.io/center/recipes/clove-unit) [![Discord channel](https://img.shields.io/discord/1167864219190964255?logo=discord&logoColor=violet)](https://discord.gg/Mjx4YRQfFt)
 
-`CLove-Unit` is a single-header unit testing library designed for C (compatible with C++).
+`CLove-Unit` is a single-header unit testing library designed for C (compatible with C++), by [Federico De Felici](https://github.com/fdefelici).
 
 This library can automatically detect and execute your tests, providing comprehensive details about successes and failures, such as file, line number,
 and reason for failure. Additionally, it offers a variety of output formats thanks to a powerful command-line API.
@@ -13,6 +13,19 @@ Here is an example of the default report format, which features pretty printing 
 
 > Join the [**discord server**](https://discord.gg/Mjx4YRQfFt) to stay tuned for updates or to make questions that doesn't require to open an issue. <br/>
 Consider also supporting `CLove-Unit` development becoming a [**sponsor**](https://github.com/users/fdefelici/sponsorship).
+
+
+## Installation
+
+Run:
+```bash
+$ npm i clove-unit.c
+```
+
+And then include `clove-unit.h` as follows:
+```c
+#include "node_modules/clove-unit.c/clove-unit.h"
+```
 
 
 ## Table of Contents
@@ -363,3 +376,10 @@ For example, the following are valid selection patterns (non-exhaustive list):
 | `Suite.*Test`      | Match all tests whose Suite Name `is` "Suite" and Test Name `ends with` "Test".          |
 | `Suite*.*Test`     | Match all tests whose Suite Name `starts with` "Suite" and Test Name `ends with` "Test". |
 | `*.*`              | Match all suites and tests.                                                 |
+
+<br>
+<br>
+
+
+[![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/clove-unit.c)
