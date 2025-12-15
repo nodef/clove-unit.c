@@ -1,0 +1,28 @@
+{
+  "name": "clove-unit.c",
+  "version": "2.4.6",
+  "description": "Single-Header Unit Testing framework for C (interoperable with C++) with test autodiscovery feature; Federico De Felici (2021).",
+  "keywords": [
+    "c",
+    "library",
+    "unit",
+    "testing",
+    "test",
+    "framework",
+    "header-only"
+  ],
+  "homepage": "https://github.com/nodef/clove-unit.c#readme",
+  "bugs": {
+    "url": "https://github.com/nodef/clove-unit.c/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/clove-unit.c.git"
+  },
+  "license": "MIT",
+  "author": "wolfram77@gmail.com",
+  "main": "clove-unit.h",
+  "scripts": {
+    "test": "bash build.sh test"
+  }
+}
