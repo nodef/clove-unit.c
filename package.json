@@ -1,6 +1,6 @@
 {
   "name": "clove-unit.c",
-  "version": "2.4.6",
+  "version": "2.4.7",
   "description": "Single-Header Unit Testing framework for C (interoperable with C++) with test autodiscovery feature; Federico De Felici (2021).",
   "keywords": [
     "c",
