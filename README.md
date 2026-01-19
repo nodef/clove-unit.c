@@ -21,6 +21,38 @@ Consider also supporting `CLove-Unit` development becoming a [**sponsor**](https
 
 Run:
 
+```bash
+$ npm i clove-unit.c
+```
+
+And then include `clove-unit.h` as follows:
+
+```c
+// main.c
+#define CLOVE_IMPLEMENTATION
+#include <clove-unit.h>
+
+CLOVE_RUNNER()
+```
+
+Finally, compile while adding the path `node_modules/clove-unit.c` to your compiler's include paths.
+
+```bash
+$ clang -I./node_modules/clove-unit.c main.c  # or, use gcc
+$ gcc   -I./node_modules/clove-unit.c main.c
+```
+
+You may also use a simpler approach with the [cpoach](https://www.npmjs.com/package/cpoach.sh) tool, which automatically adds the necessary include paths of all the installed dependencies for your project.
+
+```bash
+$ cpoach clang main.c  # or, use gcc
+$ cpoach gcc   main.c
+```
+
+
+
+Run:
+
 ```sh
 $ npm i clove-unit.c
 ```
@@ -64,17 +96,27 @@ $ gcc   -I./node_modules/clove-unit.c main.c
 
 ## Table of Contents
 
-* [Features](#features)
-* [IDE Extensions](#ide-extensions)
-* [How to Integrate](#how-to-integrate)
-* [How It Works](#how-it-works)
-* [Getting Started](#getting-started)
-* [Programming API](#programming-api)
-    * [Library Configuration](#library-configuration)
-    * [Test Definitions](#test-definitions)
-    * [Test Assertions](#test-assertions)
-    * [Test Helpers](#test-helpers)
-* [Command-Line API](#command-line-api)
+- [CLove-Unit ·    ](#clove-unit-----)
+  - [Installation](#installation)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [IDE Extensions](#ide-extensions)
+  - [How else to Integrate](#how-else-to-integrate)
+    - [Using a Package Manager](#using-a-package-manager)
+    - [Using CMake](#using-cmake)
+  - [How It Works](#how-it-works)
+  - [Getting Started](#getting-started)
+    - [1. Include CLove-Unit](#1-include-clove-unit)
+    - [2. Define a Suite](#2-define-a-suite)
+    - [3. Set up the Runner](#3-set-up-the-runner)
+    - [4. Build and Run](#4-build-and-run)
+  - [Programming API](#programming-api)
+    - [Library Configuration](#library-configuration)
+    - [Test Definitions](#test-definitions)
+    - [Test Assertions](#test-assertions)
+    - [Test Helpers](#test-helpers)
+  - [Command-Line API](#command-line-api)
+    - [Test Inclusion/Exclusion](#test-inclusionexclusion)
 
 <br>
 
@@ -437,6 +479,7 @@ For example, the following are valid selection patterns (non-exhaustive list):
 <br>
 
 
+[![](https://raw.githubusercontent.com/qb40/designs/gh-pages/0/image/11.png)](https://wolfram77.github.io)<br>
 [![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/fdefelici/clove-unit)
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
 ![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/clove-unit.c)
